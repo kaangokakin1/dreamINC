@@ -28,6 +28,8 @@ def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
 
+llm = ChatOpenAI(openai_api_key="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")
+
 #Creating the chatbot interface
 st.title("Dream Interpretor")
 
@@ -115,6 +117,8 @@ if 'memory' not in st.session_state:
 
 def get_int(user_input):
 
+    llm = ChatOpenAI(openai_api_key="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")
+
     myt_dream_prompt = PromptTemplate(
             input_variables=["history", "user_input"], 
             template=myt_dream
@@ -130,6 +134,9 @@ def get_int(user_input):
 
 
 def security(user_input):
+
+    llm = ChatOpenAI(openai_api_key="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")
+    
     s_prompt = PromptTemplate(
         input_variables=["user_input"], 
         template=security_prompt
