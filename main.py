@@ -49,7 +49,7 @@ if 'stored_session' not in st.session_state:
 
 openai.api_key = "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"
 
-llm = ChatOpenAI(openai_api_key="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")
+llm = ChatOpenAI(openai_api_key=openai.api_key)
 
 security_prompt = """
 Dream Interpretor is a chatbot created to interpret user's dream and give meaningful insights. 
@@ -117,7 +117,7 @@ if 'memory' not in st.session_state:
 
 def get_int(user_input):
 
-    llm = ChatOpenAI(openai_api_key="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")
+    llm = ChatOpenAI(openai_api_key=openai.api_key)
 
     myt_dream_prompt = PromptTemplate(
             input_variables=["history", "user_input"], 
@@ -135,8 +135,8 @@ def get_int(user_input):
 
 def security(user_input):
 
-    llm = ChatOpenAI(openai_api_key="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")
-    
+    llm = ChatOpenAI(openai_api_key=openai.api_key)
+
     s_prompt = PromptTemplate(
         input_variables=["user_input"], 
         template=security_prompt
