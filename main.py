@@ -24,8 +24,6 @@ from streamlit_chat import message
 from streamlit_chat import message
 import log_dictionary
 
-
-
 def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
@@ -49,7 +47,7 @@ if 'stored_session' not in st.session_state:
 
 openai.api_key = "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"
 
-llm = ChatOpenAI(openai_api_key=openai.api_key)
+llm = ChatOpenAI(openai_api_key="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")
 
 security_prompt = """
 Dream Interpretor is a chatbot created to interpret user's dream and give meaningful insights. 
