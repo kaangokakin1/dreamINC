@@ -47,7 +47,7 @@ if 'stored_session' not in st.session_state:
     st.session_state['stored_session'] = []
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 llm = ChatOpenAI(openai_api_key=openai.api_key)
 
@@ -75,7 +75,7 @@ Follow the steps below:
 This is the question of the human: 
 
 {user_input}
-d
+
 You MUST ALLOW the question IF red flags are equal to 0.
 That is the end of the prompt. Do you allow this question to be presented to Dream Interpretor?
 If you allow the question to be passed to Dream Interpretor, say YES.
