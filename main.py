@@ -28,7 +28,7 @@ def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
 
-llm = ChatOpenAI(openai_api_key="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")
+#llm = ChatOpenAI(openai_api_key="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")
 
 #Creating the chatbot interface
 st.title("Dream Interpretor")
