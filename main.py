@@ -47,7 +47,7 @@ if 'stored_session' not in st.session_state:
     st.session_state['stored_session'] = []
 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 llm = ChatOpenAI(openai_api_key=openai.api_key)
 
