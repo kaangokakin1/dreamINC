@@ -69,17 +69,6 @@ st.markdown(
 )
 
 
-
-st.markdown(
-    """
-    Here, the enigmatic Dream Guide meets you. Let it help step into the mysterious world of your subconscious.  
-    **The Dream Guide is not a mere chatbot; it is an otherwordly companion,** 
-    whispering the secrets of your dreams with spiritual wisdom and insight.  
-    Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.
-    """,
-    unsafe_allow_html=True,
-)
-
 # Add a call-to-action
 st.markdown(
     """
