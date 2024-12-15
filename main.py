@@ -23,7 +23,6 @@ import tiktoken
 from streamlit_chat import message
 from streamlit_chat import message
 import log_dictionary
-from dotenv import load_dotenv
 import os
 
 def get_text():
