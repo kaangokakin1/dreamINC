@@ -159,27 +159,27 @@ if user_input:
     else:
         output = "Dream Interpretor is designed as a tool for you to better grasp your subconscious mind and to create meaningful connections between your dreams and your waking life. Please use this state-of-the-art tool for its intented purposes."
     
-    now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    log_dictionary.log_dict['prompt'].append(myt_dream)
-    log_dictionary.log_dict['dream'].append(user_input)
-    log_dictionary.log_dict['interpretation'].append(output)
-    log_dictionary.log_dict['date_time'].append(dt_string)
+#    now = datetime.now()
+#    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+#    log_dictionary.log_dict['prompt'].append(myt_dream)
+#    log_dictionary.log_dict['dream'].append(user_input)
+#    log_dictionary.log_dict['interpretation'].append(output)
+#    log_dictionary.log_dict['date_time'].append(dt_string)
 
-    logs = pd.DataFrame(log_dictionary.log_dict)
+#    logs = pd.DataFrame(log_dictionary.log_dict)
 
 
      # store the output 
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output)
 
-    gc = pygsheets.authorize(service_file='dreaminc-6397c087fada.json')
+#    gc = pygsheets.authorize(service_file='dreaminc-6397c087fada.json')
 
-    sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/1T6YeSOvrBvYo5C8AgMMCoQFc57zGFInkWZcFmW2RoAQ/edit?usp=sharing")
+#    sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/1T6YeSOvrBvYo5C8AgMMCoQFc57zGFInkWZcFmW2RoAQ/edit?usp=sharing")
 
-    wks = sh[0]
+#    wks = sh[0]
 
-    wks.set_dataframe(logs, (0,0))
+#    wks.set_dataframe(logs, (0,0))
 
     
 
