@@ -134,7 +134,7 @@ def get_int(user_input):
 
 def security(user_input):
 
-    llm = ChatOpenAI(openai_api_key=openai_ api_key)
+    llm = ChatOpenAI(openai_api_key=openai_api_key)
 
     s_prompt = PromptTemplate(
         input_variables=["user_input"], 
