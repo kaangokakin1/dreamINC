@@ -58,7 +58,7 @@ st.markdown(
     <div style="background-color: #4b0082; border-radius: 10px; padding: 15px; margin-top: 20px;">
         <p style="text-align: justify; color: #e6e6fa; font-size: 1.2em; line-height: 1.6; font-family: 'Verdana', sans-serif;">
             Here, the enigmatic <span style="color: #ffa07a; font-weight: bold;">Dream Guide</span> meets you.
-            Let it help step into the mysterious world of your subconscious.  
+            Let it help you step into the mysterious world of your subconscious.  
             The Dream Guide is not a mere chatbot; it is an otherwordly companion,
             whispering the secrets of your dreams with spiritual wisdom and insight.  
             Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.
@@ -76,8 +76,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-
 
 # Storing the chat
 if 'generated' not in st.session_state:
