@@ -31,7 +31,10 @@ def get_text():
 
 
 #Creating the chatbot interface
-st.title("Dream Interpretor")
+st.title("Dreams Inc.")
+st.header('Welcome to the Realm of Dreams!')
+st.subheader('Here, the enigmatic Dream Guide meets you. Let it help you step into the mysterious world of your subconscious. The Dream Guide is not a mere chatbot; it is an otherwordly companion, whispering the secrets of your dreams with spiritual wisdom and insight. Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.')
+st.text('Do you dare learning what lies within?')
 
 # Storing the chat
 if 'generated' not in st.session_state:
