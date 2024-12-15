@@ -25,8 +25,6 @@ from streamlit_chat import message
 import log_dictionary
 import os
 
-st.write("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
-
 def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
