@@ -36,19 +36,40 @@ def get_text():
 #st.subheader('Here, the enigmatic Dream Guide meets you. Let it help you step into the mysterious world of your subconscious. The Dream Guide is not a mere chatbot; it is an otherwordly companion, whispering the secrets of your dreams with spiritual wisdom and insight. Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.')
 #st.text('Do you dare learning what lies within?')
 
-# Set the page title
-st.set_page_config(page_title="Realm of Dreams", page_icon="🌙")
+# Set the page title and layout
+st.set_page_config(page_title="Realm of Dreams", page_icon="🌙", layout="centered")
 
-# Add a header with a custom style
+# Display a custom header
 st.markdown(
     """
-    <h1 style="text-align: center; color: #6a0dad;">🌌 Welcome to the Realm of Dreams 🌌</h1>
+    <div style="background-color: #2e003e; border-radius: 15px; padding: 20px;">
+        <h1 style="text-align: center; color: #ffffff; font-size: 2.5em; font-family: 'Georgia', serif;">
+            🌌 <span style="color: #ffa07a;">Welcome to the Realm of Dreams</span> 🌌
+        </h1>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+# Display the intro text with emphasis
+
+
+st.markdown(
+    """
+    <div style="background-color: #4b0082; border-radius: 10px; padding: 15px; margin-top: 20px;">
+        <p style="text-align: justify; color: #e6e6fa; font-size: 1.2em; line-height: 1.6; font-family: 'Verdana', sans-serif;">
+            Here, the enigmatic <span style="color: #ffa07a; font-weight: bold;">Dream Guide</span> meets you.
+            Let it help step into the mysterious world of your subconscious.  
+            The Dream Guide is not a mere chatbot; it is an otherwordly companion,
+            whispering the secrets of your dreams with spiritual wisdom and insight.  
+            Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.
+        </p>
+    </div>
     """,
     unsafe_allow_html=True,
 )
 
 
-# Display the intro text with emphasis
+
 st.markdown(
     """
     Here, the enigmatic Dream Guide meets you. Let it help step into the mysterious world of your subconscious.  
