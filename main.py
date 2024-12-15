@@ -29,7 +29,6 @@ def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
 
-openai_api_key = os.getenv('OPENAI_API_KEY')
 
 #Creating the chatbot interface
 st.title("Dream Interpretor")
@@ -47,7 +46,8 @@ if 'input' not in st.session_state:
 if 'stored_session' not in st.session_state:
     st.session_state['stored_session'] = []
 
-llm = ChatOpenAI(openai_api_key=openai_api_key)
+api_key = os.getenv('OPENAI_API_KEY')
+llm = ChatOpenAI(openai_api_key=api_key)
 
 security_prompt = """
 Dream Interpretor is a chatbot created to interpret user's dream and give meaningful insights. 
@@ -115,7 +115,7 @@ if 'memory' not in st.session_state:
 
 def get_int(user_input):
 
-    llm = ChatOpenAI(openai_api_key=openai_api_key)
+    llm = ChatOpenAI(openai_api_key=api_key)
 
     myt_dream_prompt = PromptTemplate(
             input_variables=["history", "user_input"], 
@@ -133,7 +133,7 @@ def get_int(user_input):
 
 def security(user_input):
 
-    llm = ChatOpenAI(openai_api_key=openai_api_key)
+    llm = ChatOpenAI(openai_api_key=api_key)
 
     s_prompt = PromptTemplate(
         input_variables=["user_input"], 
