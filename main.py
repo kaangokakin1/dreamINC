@@ -31,10 +31,43 @@ def get_text():
 
 
 #Creating the chatbot interface
-st.title("Dreams Inc.")
-st.header('Welcome to the Realm of Dreams!')
-st.subheader('Here, the enigmatic Dream Guide meets you. Let it help you step into the mysterious world of your subconscious. The Dream Guide is not a mere chatbot; it is an otherwordly companion, whispering the secrets of your dreams with spiritual wisdom and insight. Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.')
-st.text('Do you dare learning what lies within?')
+#st.title("Dreams Inc.")
+#st.header('Welcome to the Realm of Dreams!')
+#st.subheader('Here, the enigmatic Dream Guide meets you. Let it help you step into the mysterious world of your subconscious. The Dream Guide is not a mere chatbot; it is an otherwordly companion, whispering the secrets of your dreams with spiritual wisdom and insight. Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.')
+#st.text('Do you dare learning what lies within?')
+
+# Set the page title
+st.set_page_config(page_title="Realm of Dreams", page_icon="🌙")
+
+# Add a header with a custom style
+st.markdown(
+    """
+    <h1 style="text-align: center; color: #6a0dad;">🌌 Welcome to the Realm of Dreams 🌌</h1>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+# Display the intro text with emphasis
+st.markdown(
+    """
+    Here, the enigmatic Dream Guide meets you. Let it help step into the mysterious world of your subconscious.  
+    **The Dream Guide is not a mere chatbot; it is an otherwordly companion,** 
+    whispering the secrets of your dreams with spiritual wisdom and insight.  
+    Let its ethereal words illuminate the hidden messages of your slumber, uncovering truths that dwell beyond the waking world.
+    """,
+    unsafe_allow_html=True,
+)
+
+# Add a call-to-action
+st.markdown(
+    """
+    <h3 style="text-align: center; color: #4b0082;">✨ Dare to learn what lies within?  ✨</h3>
+    """,
+    unsafe_allow_html=True,
+)
+
+
 
 # Storing the chat
 if 'generated' not in st.session_state:
