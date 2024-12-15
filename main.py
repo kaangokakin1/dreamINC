@@ -31,6 +31,18 @@ def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
 
+
+<<<<<<< HEAD
+# Load environment variables from .env
+load_dotenv()
+
+# Get the OpenAI API key from the environment
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+
+=======
+>>>>>>> 608a577 (API key restored)
+
 #Creating the chatbot interface
 st.title("Dream Interpretor")
 
@@ -48,14 +60,8 @@ if 'stored_session' not in st.session_state:
     st.session_state['stored_session'] = []
 
 
-
-# Load environment variables from .env
-load_dotenv()
-
-# Get the OpenAI API key from the environment
-openai_api_key = os.getenv('OPENAI_API_KEY')
-
 llm = ChatOpenAI(openai_api_key=openai_api_key)
+=======
 
 security_prompt = """
 Dream Interpretor is a chatbot created to interpret user's dream and give meaningful insights. 
