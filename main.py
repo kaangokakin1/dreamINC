@@ -23,12 +23,13 @@ import tiktoken
 from streamlit_chat import message
 from streamlit_chat import message
 import log_dictionary
+from dotenv import load_dotenv
+import os
+
 
 def get_text():
     input_text = st.text_input("You:", "", key = 'input')
     return input_text
-
-#llm = ChatOpenAI(openai_api_key="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")
 
 #Creating the chatbot interface
 st.title("Dream Interpretor")
@@ -47,9 +48,14 @@ if 'stored_session' not in st.session_state:
     st.session_state['stored_session'] = []
 
 
-openai.api_key = "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"
 
-llm = ChatOpenAI(openai_api_key=openai.api_key)
+# Load environment variables from .env
+load_dotenv()
+
+# Get the OpenAI API key from the environment
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+llm = ChatOpenAI(openai_api_key=openai_api_key)
 
 security_prompt = """
 Dream Interpretor is a chatbot created to interpret user's dream and give meaningful insights. 
@@ -117,7 +123,7 @@ if 'memory' not in st.session_state:
 
 def get_int(user_input):
 
-    llm = ChatOpenAI(openai_api_key=openai.api_key)
+    llm = ChatOpenAI(openai_api_key=openai_api_key)
 
     myt_dream_prompt = PromptTemplate(
             input_variables=["history", "user_input"], 
@@ -135,7 +141,7 @@ def get_int(user_input):
 
 def security(user_input):
 
-    llm = ChatOpenAI(openai_api_key=openai.api_key)
+    llm = ChatOpenAI(openai_api_key=openai_api_key)
 
     s_prompt = PromptTemplate(
         input_variables=["user_input"], 
